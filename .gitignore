@@ -1,0 +1,6 @@
+# Project exclude paths
+/.gradle/
+/build/
+/i2122-t2/build/
+/i2122-t2/build/classes/kotlin/main/
+/i2122-t2/build/classes/kotlin/test/
