@@ -15,14 +15,14 @@ class StudentsState(var students: List<Student>) {
     }
 
     fun filter(fields: List<String>) {
-        val numberOK = fields[0].isEmpty() || fields[0].all { it.isDigit() }
+        val numberOK = fields[0].isEmpty() || fields[0].any { !it.isDigit() }
         val classOK = fields[1].isEmpty()
-        val groupOK = fields[2].isEmpty() || fields[0].all { it.isDigit() }
+        val groupOK = fields[2].isEmpty() || fields[0].any { !it.isDigit() }
 
         viewStudents = students.filter {
-            numberOK || it.number == fields[0].toInt() &&
-            classOK || it.classId == fields[1] &&
-            groupOK || it.group == fields[2].toInt()
+            (numberOK || it.number == fields[0].toInt()) &&
+            (classOK || it.classId == fields[1]) &&
+            (groupOK || it.group == fields[2].toInt())
         }
     }
 }
