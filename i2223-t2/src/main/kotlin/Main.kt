@@ -57,12 +57,13 @@ fun Stars(rating: Int, max: Int, onChange: (Int) -> Unit) {
 fun ScoreStars(score: Score?, max: Int, onChange: (Score) -> Unit) {
     Column {
         Stars(score?.rating ?: 0, max) {
-            onChange(
-                Score(
-                    name = score?.name ?: throw IllegalStateException(),
-                    rating = it
+            if (score != null)
+                onChange(
+                    Score(
+                        name = score.name,
+                        rating = it
+                    )
                 )
-            )
         }
         if (score != null) {
             Text(score.name)
@@ -86,8 +87,8 @@ fun ScoreList(values: List<Score>, onSelect: (Score) -> Unit) {
 
 @Composable
 fun ScoreView(src: List<Score>, maxRating: Int) {
-    var scores by remember { mutableStateOf(src)}
-    var currentScore by remember {mutableStateOf<Score?>(null)}
+    var scores by remember { mutableStateOf(src) }
+    var currentScore by remember { mutableStateOf<Score?>(null) }
 
     Row {
         ScoreStars(currentScore, maxRating) {
@@ -110,8 +111,8 @@ fun main() {
         )
     application {
         //val winState = WindowState(width = 450.dp, height = 300.dp)
-        Window(/*state = winState,*/ onCloseRequest = ::exitApplication, resizable = true , title = "Playlist") {
-            ScoreView(movies , MAX_RATING)
+        Window(/*state = winState,*/ onCloseRequest = ::exitApplication, resizable = true, title = "Playlist") {
+            ScoreView(movies, MAX_RATING)
         }
     }
 }
