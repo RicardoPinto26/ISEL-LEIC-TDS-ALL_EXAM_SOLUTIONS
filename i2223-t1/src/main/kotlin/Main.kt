@@ -1,6 +1,6 @@
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
@@ -19,7 +19,7 @@ fun main() {
     application {
         val winState = WindowState(width = 450.dp, height = 300.dp)
         val state = remember { StudentsState(allStudents) }
-        Window(onCloseRequest = ::exitApplication, resizable = true ,/*state = winState,*/ title = "Students") {
+        Window(onCloseRequest = ::exitApplication, resizable = true,/*state = winState,*/ title = "Students") {
             Row(Modifier.padding(5.dp)) {
                 FieldsEdit(
                     labels = listOf("Number", "Class", "Group"),
