@@ -1,4 +1,4 @@
-class TodoList constructor(val tasks: List<Task> = emptyList())
+class TodoList (val tasks: List<Task> = emptyList())
 
 fun TodoList.add(task: Task): TodoList {
     require(!tasks.contains(task)) {"Task is already in the List"}
