@@ -8,7 +8,4 @@ data class Score(val name:String, var rating:Int) {
     }
 }
 
-fun List<Score>.replace(score:Score):List<Score>{
-    val originalScore = this.filter{it.name == score.name}
-    return this-originalScore+score
-}
+fun List<Score>.replace(score:Score):List<Score> = this.map { if(it.name==score.name)score else it }

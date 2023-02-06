@@ -17,9 +17,10 @@ fun ScoreView(src:List<Score>,maxRating:Int){
         )
 
         ScoreList(
-            values = src,
-            onSelect = {selectedScore = it}
+            values = curScores,
+            onSelect = {
+                selectedScore = it
+            }
         )
     }
-
 }

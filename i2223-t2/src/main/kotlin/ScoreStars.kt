@@ -18,14 +18,14 @@ fun ScoreStars(score:Score?, max:Int, onChange: (Score)->Unit) {
                 if (score != null)
                     onChange(
                         Score(
-                        name=score.name,
-                        rating = it
+                            name=score.name,
+                            rating = it
                         )
                     )
             }
         )
         Text(score?.name ?: "",
             style = MaterialTheme.typography.h2,
-            textAlign = TextAlign.Center)
+        )
     }
 }
