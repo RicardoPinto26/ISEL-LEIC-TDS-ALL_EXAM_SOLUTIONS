@@ -1,8 +1,9 @@
 
 rootProject.name = "all_tests"
 
-include("i2122-t2")
-include("v2122-t2")
-include("i2223-t1")
-include("i2223-t2")
-include("i2223-t2")
+include("2122i-t1")
+include("2122i-t2")
+include("2122v-t1")
+include("2122v-t2")
+include("2223i-t1")
+include("2223i-t2")

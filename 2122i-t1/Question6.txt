@@ -1,0 +1,10 @@
+1) Add arguments to main:
+    fun main(args: Array<String>) = application {
+
+2) Change MainContent so that it receives the capacity, and input that into the initial Occupancy:
+    fun MainContent(capacity :Int) {
+        var occupancy by remember { mutableStateOf(Occupancy(0,capacity)) }
+
+
+3) Change the MainContent call in main:
+    MainContent( args.firstOrNull()?.toIntOrNull() ?: DEFAULT_CAPACITY )

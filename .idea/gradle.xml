@@ -9,10 +9,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/i2122-t2" />
-            <option value="$PROJECT_DIR$/i2223-t1" />
-            <option value="$PROJECT_DIR$/i2223-t2" />
-            <option value="$PROJECT_DIR$/v2122-t2" />
+            <option value="$PROJECT_DIR$/2122i-t1" />
+            <option value="$PROJECT_DIR$/2122i-t2" />
+            <option value="$PROJECT_DIR$/2122v-t1" />
+            <option value="$PROJECT_DIR$/2122v-t2" />
+            <option value="$PROJECT_DIR$/2223i-t1" />
+            <option value="$PROJECT_DIR$/2223i-t2" />
           </set>
         </option>
       </GradleProjectSettings>

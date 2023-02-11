@@ -1,0 +1,7 @@
+1) Declare the following function:
+    fun GradeConverter.toText() = "${quantitative.value} -> ${qualitative.description}"
+
+2) Put the declaration of the converter variable before the call to Window.
+
+3) Change the onCloseRequest parameter on Window to
+    onCloseRequest = { println(converter.toText()); exitApplication() }
